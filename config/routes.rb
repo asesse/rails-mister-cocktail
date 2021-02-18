@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'doses/new'
   resources :cocktails, only: [:index, :show, :new, :create] do
     resources :doses, only: [:new, :create]
   end
+  resources :cocktails, only: [:destroy]
   resources :doses, only: [:destroy]
   resources :ingredients, only: [:show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

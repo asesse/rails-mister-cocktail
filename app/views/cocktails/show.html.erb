@@ -6,8 +6,11 @@
   <strong>Name:</strong>
   <%= @cocktail.name %>
 </p>
+<p>
+  <strong>Name:</strong>
+  <%= @cocktail.dose %>
+</p>
 
-
-
+<%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail) %>
 <%= link_to 'Back to all cocktails', cocktails_path %>
 <%= link_to 'Delete cocktail', cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure? Really, really sure?"} %>
